@@ -6,7 +6,8 @@ def trape_inte(f,a = 0, b = 1, n = 100):
     h = (b - a) / n
     S = 0
     k = 1
-    for k in range(n + 1):
+    #rangeの範囲を修正
+    for k in range(1, n + 1):
         S += (h/2) * (f(a + (k - 1) * h) + f(a + k * h))
     return S
 

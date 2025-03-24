@@ -6,13 +6,11 @@ a = int(a)
 b = int(b)
 
 def euclid(a,b):
-    while True:
-        q = a // b
-        r = a % b
-        a = b
-        b = r
-        if r == 0:
-            return a
+    #rを使わずwhileの終了条件を明示
+    while b > 0:
+        a , b= b, a % b
+
+    return a
 
 print(euclid(a,b))
 
@@ -23,18 +21,14 @@ b = input("b の値を入力: ")
 a = int(a)
 b = int(b)
 
-def euclid(a,b):
-    while True:
-        q = a // b
-        r = a % b
-        a = b
-        b = r
-        if r == 0:
-            if a == 1:
-                return True
-            else:
-                return False
-print(euclid(a,b))
+def mutually_prime(a,b):
+    #作成した関数euclidを利用
+    c = euclid(a,b)
+    if c == 1:
+        return True
+    else:
+        return False
+print(mutually_prime(a,b))
 
 # Extra
 import random
