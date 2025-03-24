@@ -5,7 +5,11 @@ b = input("bの値を入力: ")
 q = int(a) - 1
 
 while True:
-    if q == 1:
+    if int(a) <= 1:
+        print("数値が適切ではありません")
+        break
+    #aに0や負の値が代入されたときにエラーが起きないように修正
+    elif q == 1:
         print(a + "は素数である")
         break
     elif int(a) % q == 0:
@@ -17,7 +21,11 @@ while True:
 q = int(b) - 1
 
 while True:
-    if q == 1:
+    if int(b) <= 1:
+        print("数値が適切ではありません")
+        break
+    #bに0や負の値が代入されたときにエラーが起きないように修正
+    elif q == 1:
         print(b + "は素数である")
         break
     elif int(b) % q == 0:

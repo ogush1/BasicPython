@@ -11,6 +11,6 @@ h = (b - a) / N
 k = 1
 S = 0
 
-for k in range(N + 1):
+for k in range(1, N + 1):
     S += (h/2) * (sin(a + (k - 1) * h) + sin(a + k * h))
 print("台形の面積は" + str(S))
